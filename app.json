@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "reactnd-design-fundamentals",
+    "slug": "reactnd-design-fundamentals",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "reactnd-design-fundamentals"
+}
