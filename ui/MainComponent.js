@@ -1,11 +1,14 @@
 import React from "react"
 import { Text, View, StyleSheet }  from "react-native"
+import { useTheme } from "@react-navigation/native"
 
 export default function MainComponent() {
+  const { colors, anotherStyle } = useTheme() //https://reactnavigation.org/docs/themes#using-the-current-theme-in-your-own-components
 
     return ( 
     <View style={styles.container}>
-      <Text style={{ fontSize:40 }}>Open MainComponent.js to start working on your app!</Text>
+      <Text style={{ color: colors.colorSecondadry, fontSize:40 }}>Open MainComponent.js to start working on your app!</Text>
+      <Text style={anotherStyle}>Open MainComponent.js to start working on your app!</Text>
     </View>
     )
 }
