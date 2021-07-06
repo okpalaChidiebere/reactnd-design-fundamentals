@@ -1,0 +1,1 @@
+export const component_main = "MainComponent"
