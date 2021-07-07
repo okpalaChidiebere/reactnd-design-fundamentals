@@ -37,3 +37,17 @@ A variation of this pattern is to show both the list and details section on thes
 - Style changes the appearance of a single UI element
 - Theme is applying a collection of style to an element, a component or even your whole application. Eg if we want to turn all the button in our app to be pink for branding, we basically create a style to so that and thenapply it to the whole applications theme.
 - Another option that can act like theme for your app and help you re-use styles is [Styled Component](https://styled-components.com/docs).
+
+# Surfaces
+- Surface is container which cast a shadow.
+
+- Surfaces also exists in 3D spaces with varying widths and heights and at different elevations. These surfaces are arranged in front of and behind one another and cast shadows on lower surfaces. 
+
+- In visual objects that are closer to us command more of our visual attention and we can tell which objects that are closer based on their size and how they cover and cast shadows on the things that are behind them. So we can use depth as a queue in our UI to direct attention to important elements. So carry this over to a 2D screen like our mobile devices, we use shadows to convey a surface elevation in relation to other surfaces. Surfaces nearer to you will cast a larger shadow
+
+**When to use Surfaces and when not to**
+- If content is homogenous when scanning and comparison will be important, then it likely belongs on a single surface then you can separate each item with a divider. Eg if you have items to render in a flatlist, there is no need to use elevation. It will cause the scrolling to be slower 
+- If you need to present a collection of heterogeneous items, then individual surfaces are appropriate. Eg if you have items you want to render in a flexwrap scrollview, then you can use elevation if you know comparisons is not important between these items.
+- Try not to have more that 5 surfaces on screen(plus toolbar or appBar) at once because they can be distracting.
+
+To implement surfaces, identify views in your screen by hierarchy and set backgroThere are pre-defined standard elevations for differnet view types like appBar, FAB, etc This applies for web, iOS and Android. Check them out [here](https://material.io/design/environment/elevation.html#default-elevations)

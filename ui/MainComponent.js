@@ -1,15 +1,20 @@
 import React from "react"
-import { Text, View, StyleSheet }  from "react-native"
+import { Text, View, ScrollView, Platform, StyleSheet }  from "react-native"
 import { useTheme } from "@react-navigation/native"
 
 export default function MainComponent() {
   const { colors, anotherStyle } = useTheme() //https://reactnavigation.org/docs/themes#using-the-current-theme-in-your-own-components
 
     return ( 
-    <View style={styles.container}>
-      <Text style={{ color: colors.colorSecondadry, fontSize:40 }}>Open MainComponent.js to start working on your app!</Text>
-      <Text style={anotherStyle}>Open MainComponent.js to start working on your app!</Text>
-    </View>
+    <ScrollView>
+      <View style={styles.container}>
+        <Text style={{ color: colors.colorSecondadry, fontSize:40 }}>Open MainComponent.js to start working on your app!</Text>
+        <Text style={anotherStyle}>Open MainComponent.js to start working on your app!</Text>
+        <View style={styles.surface1}/>
+        <View style={styles.surface2}/>
+        <View style={styles.surface3}/>
+      </View>
+    </ScrollView>
     )
 }
 
@@ -20,6 +25,55 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
+    surface1: {
+      margin: 30,
+      width:"80%",
+      height: 200,
+      backgroundColor: '#fff',
+      ...Platform.select({ //NOTE: you dont have to add this Platform select, but for readability purpose it makes sense
+        ios: {
+            shadowColor: '#000',
+            shadowOffset: { width: 0, height: 4 },
+            shadowOpacity: 0.5,
+        },
+        android: {
+          elevation: 4,
+        },
+      }),
+    },
+    surface2: {
+      margin: 30,
+      width:"80%",
+      height: 200,
+      backgroundColor: '#fff',
+      ...Platform.select({
+        ios: {
+            shadowColor: '#000',
+            shadowOffset: { width: 0, height: 8 },
+            shadowOpacity: 0.5,
+        },
+        android: {
+          elevation: 8,
+        },
+      }),
+    },
+    //this one will produce the most diffuse shadow; giving it the appearance of being higher up furhter in front of the back plane
+    surface3: {
+      margin: 30,
+      width:"80%",
+      height: 200,
+      backgroundColor: '#fff',
+      ...Platform.select({
+        ios: {
+            shadowColor: '#000',
+            shadowOffset: { width: 0, height: 16 },
+            shadowOpacity: 0.5,
+        },
+        android: {
+          elevation: 16,
+        },
+      }),
+    }
   })
 
 export function MainComponentOptions({ route, navigation }) {
