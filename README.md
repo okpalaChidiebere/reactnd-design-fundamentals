@@ -57,4 +57,11 @@ This is a vibrant color, circular action button that floats above the rest of yo
 If there is one clear action (an action that someone will likely want to do) on a screen, then it is a great way to promote it and only used a ingle FAB per screen.
 If you are struggling to identify which action should be a FAB, then it is a good sign that you dont need one on that screen.
 - There are floating action buttons from [React Native Directory](https://reactnative.directory/?search=action+) to use. I used [this one](https://www.npmjs.com/package/react-native-floating-action) for this project. Check out [this other one](https://github.com/mastermoo/react-native-action-button). It have some good features that the one i used dont have!
-- NOTE: I was not able to manipulate the elevation shadow for the FAB when its pressed due to i get an warning when `Animated.Value` to shadowOffset or elevation which expects a `number`. I dont know if we can get this done but i will look into this later.
+- Please read [Buttons: floating action button](https://www.material.io/components/buttons-floating-action-button) and [https://www.material.io/components/buttons-floating-action-button/ios]
+- [Considering when to use FAB or putting it in some other view?](https://ux.stackexchange.com/questions/100424/is-it-a-strong-anti-pattern-to-use-a-floating-action-button-in-an-ios-app)
+- [https://medium.com/macoclock/its-time-for-ios-developers-to-embrace-the-fab-65d7636e6eff](https://medium.com/macoclock/its-time-for-ios-developers-to-embrace-the-fab-65d7636e6eff)
+
+# Surface Reaction
+- The first form of visual Effect is with Touchables. Like TouchableHighlight, TouchableOpacity, TouchableNativeFeedback for only Android. (Use this for your android icons ot views that can react to touch as it empowers the user. it is recommened), TouchableWithoutFeedback
+- The second form of visual feedback is where the surface itself can lift to meet your finger almost like your finger is magnetically attracting that surface. We can do this on a FAB, buttons or any view we want.
+- We can apply all this effect as touch guestires for when a user tapping a button (like FAB, customButton), swiping to scroll through a list, and so on.
