@@ -1,20 +1,29 @@
 import React from "react"
 import { Text, View, ScrollView, Platform, StyleSheet }  from "react-native"
 import { useTheme } from "@react-navigation/native"
+import { FloatingAction } from "react-native-floating-action"
+import { Entypo } from "@expo/vector-icons"
 
 export default function MainComponent() {
   const { colors, anotherStyle } = useTheme() //https://reactnavigation.org/docs/themes#using-the-current-theme-in-your-own-components
 
     return ( 
-    <ScrollView>
-      <View style={styles.container}>
-        <Text style={{ color: colors.colorSecondadry, fontSize:40 }}>Open MainComponent.js to start working on your app!</Text>
-        <Text style={anotherStyle}>Open MainComponent.js to start working on your app!</Text>
-        <View style={styles.surface1}/>
-        <View style={styles.surface2}/>
-        <View style={styles.surface3}/>
-      </View>
-    </ScrollView>
+      <>
+        <ScrollView>
+          <View style={styles.container}>
+            <Text style={{ color: colors.colorSecondadry, fontSize:40 }}>Open MainComponent.js to start working on your app!</Text>
+            <Text style={anotherStyle}>Open MainComponent.js to start working on your app!</Text>
+            <View style={styles.surface1}/>
+            <View style={styles.surface2}/>
+            <View style={styles.surface3}/>
+          </View>
+        </ScrollView>
+        <FloatingAction 
+          color={colors.colorSecondadry}
+          showBackground={false}
+          floatingIcon={<Entypo name="plus" size={24} color="#fff" />}
+        />            
+      </>
     )
 }
 

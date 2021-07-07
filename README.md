@@ -51,3 +51,10 @@ A variation of this pattern is to show both the list and details section on thes
 - Try not to have more that 5 surfaces on screen(plus toolbar or appBar) at once because they can be distracting.
 
 To implement surfaces, identify views in your screen by hierarchy and set backgroThere are pre-defined standard elevations for differnet view types like appBar, FAB, etc This applies for web, iOS and Android. Check them out [here](https://material.io/design/environment/elevation.html#default-elevations)
+
+# Floating Action Button
+This is a vibrant color, circular action button that floats above the rest of your content in your app. It is a way of promoting a prominent action. It generally has the highest elevation of all views. They genrally have a resting elevation of 6 and rising to 12 when pressed. They are usually in sizes of 56 or 40 in diameters. They can be positioned wherever in your screen but they tend to sit best where two surfaces meet.
+If there is one clear action (an action that someone will likely want to do) on a screen, then it is a great way to promote it and only used a ingle FAB per screen.
+If you are struggling to identify which action should be a FAB, then it is a good sign that you dont need one on that screen.
+- There are floating action buttons from [React Native Directory](https://reactnative.directory/?search=action+) to use. I used [this one](https://www.npmjs.com/package/react-native-floating-action) for this project. Check out [this other one](https://github.com/mastermoo/react-native-action-button). It have some good features that the one i used dont have!
+- NOTE: I was not able to manipulate the elevation shadow for the FAB when its pressed due to i get an warning when `Animated.Value` to shadowOffset or elevation which expects a `number`. I dont know if we can get this done but i will look into this later.
