@@ -65,3 +65,9 @@ If you are struggling to identify which action should be a FAB, then it is a goo
 - The first form of visual Effect is with Touchables. Like TouchableHighlight, TouchableOpacity, TouchableNativeFeedback for only Android. (Use this for your android icons ot views that can react to touch as it empowers the user. it is recommened), TouchableWithoutFeedback
 - The second form of visual feedback is where the surface itself can lift to meet your finger almost like your finger is magnetically attracting that surface. We can do this on a FAB, buttons or any view we want.
 - We can apply all this effect as touch guestires for when a user tapping a button (like FAB, customButton), swiping to scroll through a list, and so on.
+
+# Transforming Paper
+- Surfaces can change shape, split aprart, destroyed or rejoin. A section of a surface (eg surface in a List) can lift out and form their own surface (the listItem can lift out and expands to become the detail screen)
+- This interactions can help you build immersive applications that respond to interaction, rather than jumping into new states making them easier to comprehend
+- Eg of A Flip card reveal surface transformation video [here](https://codedaily.io/tutorials/Create-a-Flip-Card-Animation-with-React-Native) similar to what [W3Schools](https://www.w3schools.com/howto/howto_css_flip_card.asp) had. More Paper sureface transformations tutorials [here](https://codedaily.io/courses). Follow the teacher on [twitter](https://twitter.com/browniefed) for ReactNative animations updates
+- Check out list of supported transformations in RN [here](https://stackoverflow.com/questions/43022281/react-native-animation-event-style-property-is-not-supported)

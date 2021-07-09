@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
 export function MainComponentOptions({ route, navigation }) {
 
     return {
-        title: "Android Design: Lesson 1",
+        title: "Material Design: Lesson 1",
         headerTintColor: '#fff',
         headerStyle: { 
             backgroundColor: "#3F51B5",
