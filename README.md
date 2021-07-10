@@ -69,5 +69,15 @@ If you are struggling to identify which action should be a FAB, then it is a goo
 # Transforming Paper
 - Surfaces can change shape, split aprart, destroyed or rejoin. A section of a surface (eg surface in a List) can lift out and form their own surface (the listItem can lift out and expands to become the detail screen)
 - This interactions can help you build immersive applications that respond to interaction, rather than jumping into new states making them easier to comprehend
-- Eg of A Flip card reveal surface transformation video [here](https://codedaily.io/tutorials/Create-a-Flip-Card-Animation-with-React-Native) similar to what [W3Schools](https://www.w3schools.com/howto/howto_css_flip_card.asp) had. More Paper sureface transformations tutorials [here](https://codedaily.io/courses). Follow the teacher on [twitter](https://twitter.com/browniefed) for ReactNative animations updates
+- Eg of A Flip card reveal surface transformation video [here](https://codedaily.io/tutorials/Create-a-Flip-Card-Animation-with-React-Native) similar to what [W3Schools](https://www.w3schools.com/howto/howto_css_flip_card.asp) had. More Paper surface transformations tutorials [here](https://codedaily.io/courses). Follow the teacher on [twitter](https://twitter.com/browniefed) for ReactNative animations updates
 - Check out list of supported transformations in RN [here](https://stackoverflow.com/questions/43022281/react-native-animation-event-style-property-is-not-supported)
+
+# Responding to Scroll Events
+- Just as material can change width and height, they can also change elevatiion. Just like the magnetic reaction of buttons to the touch of your finger, this can also occur in interactions like scrolling.
+Imaginig two surfaces with start up together and lockstep. A a certain point, one surface may need to stick and raise up to allow the other to pass below it. The lower surface sliding below the other forms a step.
+- EG. We see this used for implementing collapsing Header Layout in RN. See the examples below: 
+- Here is the [arctile](https://medium.com/dailyjs/how-i-linked-animated-headers-to-scroll-position-in-react-native-1a4906fca25b) that help with the one i mimplemented. This [article](https://blog.jscrambler.com/how-to-animate-a-header-view-on-scroll-with-react-native-animated) is also related as well
+- [https://medium.com/@habibridho/implementing-collapsing-toolbar-using-react-native-4a84e1718f11](https://medium.com/@habibridho/implementing-collapsing-toolbar-using-react-native-4a84e1718f11)
+- [https://stormotion.io/blog/how-to-create-collapsing-tab-header-using-react-native/](https://stormotion.io/blog/how-to-create-collapsing-tab-header-using-react-native/)
+- [https://javascript.plainenglish.io/simple-collapsing-header-animation-using-react-native-21f4c26b2222](https://javascript.plainenglish.io/simple-collapsing-header-animation-using-react-native-21f4c26b2222)
+- In Summary, whether your React Native header stay in place, perform the seam-to-step transition or totally scrollout when your scroll the content depends on whether you want your header to be elevated or not.
