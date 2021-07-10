@@ -81,3 +81,21 @@ Imaginig two surfaces with start up together and lockstep. A a certain point, on
 - [https://stormotion.io/blog/how-to-create-collapsing-tab-header-using-react-native/](https://stormotion.io/blog/how-to-create-collapsing-tab-header-using-react-native/)
 - [https://javascript.plainenglish.io/simple-collapsing-header-animation-using-react-native-21f4c26b2222](https://javascript.plainenglish.io/simple-collapsing-header-animation-using-react-native-21f4c26b2222)
 - In Summary, whether your React Native header stay in place, perform the seam-to-step transition or totally scrollout when your scroll the content depends on whether you want your header to be elevated or not.
+
+# The Gastalt Laws of Grouping
+Users derived a lot of information about your app based on how it is arranged. 
+- **The Law of Past Experience ("Hmm.. This looks familiar?"):** This is where you show digital versions of things from the physical world in your app like Notepad, StopWatches, Cards. Eg if you have a card and you make it flipable on longPress. This will result in making the UI a little more comfortable and  familiar to the user. Keyword here is familiar. So depeding what you render in screen, the user will interprete on their own how they can interact with your UI based on past experiences with other app or experiences in real world (althugh your app UI dont really have to look like their real world counter parts)
+- **The Law of Proximity ("These are close, so must be related"):** The closeness of objects in screen tells instinctively that they are related. I can be how you group items in screen based on the space. 
+- **The Law of Similarity:** This is an extension of the second law above. It is just more of using space to our advantage. Tightening the space between elements helps them feel more related to one another while adding space between elements separates them both visually and conceptually
+
+# Grids and Keylines
+- There are specifics of laying things out on screen for users. If its a bigger screen it is just going to be the multiples of whatever the small screen is. This is why you should make extensive use of dimension files in your app to make the UI of your app work on multi form factors across devices like Margins, padding, width, height, etc. 
+- Take a look at this source [code](https://github.com/muzei/muzei/tree/main/main/src/main/res) to see how to use and group dimensions files for various screen sizes
+- Read more from the Material design doc to see the psecifics layed out [here](https://material.io/design/layout/spacing-methods.html#spacing)
+- More Design Templates that Google hosts like Sketch, Adobe [here](https://material.io/resources)
+
+# Colors
+- We can infer information from an item color an appearance. Color can tell us if we should stop or go, if a food looks ripe or rotten, or if our battery is running low. Read [this](https://material.io/design/color/the-color-system.html#color-usage-and-palettes) please
+- If you have a primary color but no accent, you can use Color Fairy, like complementary colors in the link attached to help you pick one. This [tool](https://color.adobe.com/create/color-wheel) from Adobe can help you pick one. Accent colors should be very distinguishable from the primary color.
+- Understanding [2014 Material Design Color palates](https://material.io/design/color/the-color-system.html#tools-for-picking-colors), Your primary color will be the 500 shade. Then darker shades will have higher numbers like 700 or 900. Lighter shade will be be lower numbers like 200. It is recommended to use three hues of your primary color, then one accent color. 
+- NOTE: you dont really want to use Shades of your primary color, because you will loose the ability to highlight certain elemts 
