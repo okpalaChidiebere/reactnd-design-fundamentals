@@ -1,12 +1,11 @@
-import React, { useContext, useEffect, useState } from "react"
-import { View, Text, StyleSheet, Image, Button, ScrollView }  from "react-native"
+import React, { useEffect, useState } from "react"
+import { View, Text, StyleSheet, Image, Button, ScrollView, StatusBar }  from "react-native"
 import { useTheme } from "@react-navigation/native"
 import Palette from "react-native-palette-full"
 import Constants from "expo-constants"
 import * as ImagePicker from "expo-image-picker"
 import * as ImageManipulator from "expo-image-manipulator"
 import { Provider, Modal, Portal } from "react-native-paper"
-import Context from '../appContext'
 
 
 const initialState = {
@@ -16,14 +15,13 @@ const initialState = {
 
 export default function ImagePaletteComponent(){
     const { screenContainer, colors } = useTheme()
-    const { setStatusBarColor } = useContext(Context)
     const [image, setImage] = useState(null)
     const [pallete, setPallete] = useState(initialState)
     const [visible, setVisible] = useState(false)
 
     useEffect(() => {
         //You basically can set the statusBar color dynamically if we want
-        // setStatusBarColor(colors.colorPrimaryDark)
+        //StatusBar.setBackgroundColor(colors.colorPrimaryDark, true)
     }, [])
 
     const showModal = () => setVisible(true)
@@ -102,7 +100,7 @@ export default function ImagePaletteComponent(){
             const result = await Palette.getNamedSwatchesFromUrl(uri)
             //console.log(result)
             //NOTE: result.Muted.population tells us how many pixels in the image were from that color. This will help you decide which color is more dorminant color. 
-            //We can change the color of the statusBar using the setStatusBarColor()callBack method from our context 
+            //We can change the color of the statusBar using the StatusBar.setBackgroundColor() method
             setPallete({
                 colorPallete: {
                     colorOne: { value: result["Muted Dark"].color, name: 'DarkMuted' },
