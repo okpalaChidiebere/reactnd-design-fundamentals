@@ -1,5 +1,5 @@
 import { DefaultTheme } from "@react-navigation/native"
-import { indigo_500, indigo_700 } from "./colors"
+import { indigo_500, indigo_700, label } from "./colors"
 
 //https://reactnavigation.org/docs/themes#basic-usage
 export default {
@@ -10,6 +10,7 @@ export default {
       colorSecondadry: "#0099ff", //here we add our own style to the theme
       colorPrimary: indigo_500,
       colorPrimaryDark: indigo_700,
+      label,
     },
     //Adding our own custom style that will be applied to our theme. The we can use this style anywhere in our app easily
     anotherStyle: {
@@ -20,8 +21,8 @@ export default {
     screenContainer: {
       flex: 1,
       backgroundColor: '#fff',
-      justifyContent:"center",
-      alignItems:"center",
+      //justifyContent:"center",
+      //alignItems:"center",
     }
 }
   
